@@ -11,8 +11,10 @@ class TextFieldViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpUI()
+    }
+    
+    private func setUpUI() {
         
         let tf = UITextField(frame: CGRect(x: 10, y: 100, width: self.view.frame.width - 20, height: 44))
         tf.borderStyle = .none
@@ -20,16 +22,5 @@ class TextFieldViewController: UIViewController {
         tf.attributedPlaceholder = NSAttributedString(string: "搜索", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular), NSAttributedString.Key.foregroundColor : UIColor.orange])
         self.view.addSubview(tf)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
